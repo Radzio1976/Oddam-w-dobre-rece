@@ -1,0 +1,14 @@
+.login-section {
+    display: flex;
+    width: 100%;
+    .login-form-container {
+        width: 30%;
+        height: 400px;
+        margin: 0 auto;
+        form {
+            input {
+                display: block;
+            }
+        }
+    }
+}

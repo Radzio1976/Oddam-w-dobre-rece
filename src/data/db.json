@@ -1,1 +1,18 @@
-{}
+{
+  "users": [
+    {
+      "name": "Radosław",
+      "surname": "Tomaszewski",
+      "email": "r.tomaszewski@gmail.com",
+      "password": "12345",
+      "id": 1
+    },
+    {
+      "name": "Marzena",
+      "surname": "Rosiak",
+      "email": "rosiak.marzena@tlen.pl",
+      "password": "54321",
+      "id": 2
+    }
+  ]
+}

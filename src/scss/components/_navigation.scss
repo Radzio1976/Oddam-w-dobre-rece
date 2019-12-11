@@ -1,0 +1,37 @@
+nav {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    width: 100%;
+    .upper-nav {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 100px;
+        h4 {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+    }
+    .lower-nav {
+        display: flex;
+        justify-content: flex-end;
+        height: 40px;
+        margin-right: 100px;
+        ul {
+            display: flex;
+            li {
+                margin-top: 8px;
+                margin-bottom: 5px;
+                margin-left: 20px;
+                padding: 2px;
+                list-style-type: none;
+                cursor: pointer;
+                &:hover {
+                    border: 2px solid orange;
+                }
+            }
+        }
+    }
+}
