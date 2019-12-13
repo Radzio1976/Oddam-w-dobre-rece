@@ -1,4 +1,5 @@
 {
+  "thingsToGive": [],
   "users": [
     {
       "name": "Radosław",
@@ -13,6 +14,13 @@
       "email": "rosiak.marzena@tlen.pl",
       "password": "54321",
       "id": 2
+    },
+    {
+      "name": "Tomek",
+      "surname": "Kowalski",
+      "email": "kowalski@gmail.com",
+      "password": "12345",
+      "id": 3
     }
   ]
 }

@@ -4,13 +4,13 @@ import Home from './components/Home';
 import Login from './components/Login';
 import Register from './components/Register';
 import Navigation from './components/Navigation';
+import GiveThings from './components/GiveThings';
 
 const AuthContext = createContext()
 
 class App extends React.Component {
   state = {
-    isAuth: false,
-    currentUser: ""
+    isAuth: false
   }
 
   componentDidMount() {
@@ -22,8 +22,7 @@ class App extends React.Component {
   login = (email) => {
     localStorage.setItem("email", email)
     this.setState({
-      isAuth: true,
-      currentUser: localStorage.getItem("email")
+      isAuth: true
     })
   }
 
@@ -36,11 +35,12 @@ class App extends React.Component {
 
   render() {
     return (
-      <AuthContext.Provider value={{ isAuth: this.state.isAuth, currentUser: this.state.currentUser, login: this.login, logout: this.logout }}>
+      <AuthContext.Provider value={{ isAuth: this.state.isAuth, login: this.login, logout: this.logout }}>
         <BrowserRouter>
           <Navigation />
           <Switch>
             <Route path="/" exact component={Home} />
+            <Route path="/give-things" component={GiveThings} />
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />
           </Switch>

@@ -6,20 +6,22 @@ function Navigation(props) {
     return (
         <AuthContext.Consumer>
             {
-                ({ isAuth, logout, currentUser }) => {
+                ({ isAuth, logout }) => {
                     return (
                         <nav>
                             <div className="upper-nav">
                                 {
                                     isAuth ?
                                         <>
-                                            <h4>Cześć {currentUser}</h4>
+                                            <h4>Cześć {localStorage.getItem("email")}</h4>
+                                            <h4 onClick={() => props.history.push("/give-things")}>Oddaj rzeczy</h4>
                                             <h4 onClick={logout}>Wyloguj</h4>
                                         </> :
-                                        <h4 onClick={() => props.history.push("/login")}>Zaloguj</h4>
-
+                                        <>
+                                            <h4 onClick={() => props.history.push("/login")}>Zaloguj</h4>
+                                            <h4 onClick={() => props.history.push("/register")}>Załóż konto</h4>
+                                        </>
                                 }
-                                <h4 onClick={() => props.history.push("/register")}>Załóż konto</h4>
                             </div>
                             <div className="lower-nav">
                                 <ul>
