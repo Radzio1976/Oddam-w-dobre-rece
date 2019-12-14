@@ -42,7 +42,26 @@ class GiveThings extends React.Component {
             stepCounter: this.state.stepCounter - 1
         })
     }
-
+    /*
+        setData = (data) => {
+            this.setState({
+                ...this.state,
+                ...data
+            })
+        }
+    
+        getForms() {
+            switch (this.state.stepCounter) {
+                case 1:
+                    return <FirstStep inputs={this.state} setData={this.setData} />
+                case 2:
+                    return <SecoundStep inputs={this.state} setData={this.setData} />
+    
+                default:
+                    break;
+            }
+        }
+    */
 
     render() {
         return (
