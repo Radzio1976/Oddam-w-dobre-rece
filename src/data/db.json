@@ -30,7 +30,7 @@
       "date": "12.12.2020",
       "time": "12.00",
       "comments": "ssssssss",
-      "id": 1
+      "id": 2
     },
     {
       "user": "r.tomaszewski@gmail.com",
@@ -46,7 +46,7 @@
       "date": "12.12.2020",
       "time": "12.00",
       "comments": "ssssssss",
-      "id": 1
+      "id": 3
     },
     {
       "user": "r.tomaszewski@gmail.com",
@@ -62,7 +62,7 @@
       "date": "12.12.2020",
       "time": "12.00",
       "comments": "ssssssss",
-      "id": 1
+      "id": 4
     },
     {
       "user": "r.tomaszewski@gmail.com",
@@ -78,7 +78,7 @@
       "date": "12.12.2020",
       "time": "12.00",
       "comments": "ssssssss",
-      "id": 1
+      "id": 5
     },
     {
       "user": "r.tomaszewski@gmail.com",
@@ -94,7 +94,7 @@
       "date": "12.12.2020",
       "time": "12.00",
       "comments": "ssssssss",
-      "id": 1
+      "id": 6
     },
     {
       "user": "r.tomaszewski@gmail.com",
@@ -110,7 +110,7 @@
       "date": "12.12.2020",
       "time": "12.00",
       "comments": "ssssssss",
-      "id": 1
+      "id": 7
     },
     {
       "user": "r.tomaszewski@gmail.com",
@@ -126,7 +126,23 @@
       "date": "12.12.2020",
       "time": "12.00",
       "comments": "aaaaaaaaaaaaaaaaaaaaa",
-      "id": 2
+      "id": 8
+    },
+    {
+      "user": "r.tomaszewski@gmail.com",
+      "typeOfThingsToGive": "ubrania, które nadają się do ponownego użycia",
+      "bagsQuantity": 3,
+      "location": "Poznań",
+      "forWhom": "bezdomnym",
+      "organisationName": "SUPER FUNDACJA",
+      "street": "Wrocławska, 83A/6",
+      "city": "Jelenia Góra",
+      "zipCode": "58888",
+      "phone": "33333333333333333333",
+      "date": "12.12.2020",
+      "time": "12.12",
+      "comments": "sssssssssssssssssss",
+      "id": 9
     }
   ],
   "users": [
