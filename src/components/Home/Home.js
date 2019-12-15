@@ -13,6 +13,7 @@ class Home extends React.Component {
                 <HomeHeader />
                 <ThreeColumns />
                 <FourSteps />
+                <AboutUs />
             </div>
         )
     }
