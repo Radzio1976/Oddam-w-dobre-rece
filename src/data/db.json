@@ -145,6 +145,94 @@
       "id": 9
     }
   ],
+  "fundations": [
+    {
+      "name": "Fundacjom",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.0",
+      "items": [
+        {
+          "header": "to jest header1",
+          "subheader": "to jest subheader1",
+          "desc": "to jest desc1"
+        },
+        {
+          "header": "to jest header1",
+          "subheader": "to jest subheader1",
+          "desc": "to jest desc1"
+        },
+        {
+          "header": "to jest header1",
+          "subheader": "to jest subheader1",
+          "desc": "to jest desc1"
+        },
+        {
+          "header": "to jest header1",
+          "subheader": "to jest subheader1",
+          "desc": "to jest desc1"
+        },
+        {
+          "header": "to jest header1",
+          "subheader": "to jest subheader1",
+          "desc": "to jest desc1"
+        },
+        {
+          "header": "to jest header1",
+          "subheader": "to jest subheader1",
+          "desc": "to jest desc1"
+        },
+        {
+          "header": "to jest header1",
+          "subheader": "to jest subheader1",
+          "desc": "to jest desc1"
+        }
+      ],
+      "id": 0
+    },
+    {
+      "name": "Organizacjom pozarządowym",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.1",
+      "items": [
+        {
+          "header": "to jest header2",
+          "subheader": "to jest subheader2",
+          "desc": "to jest desc2"
+        },
+        {
+          "header": "to jest header2",
+          "subheader": "to jest subheader2",
+          "desc": "to jest desc2"
+        },
+        {
+          "header": "to jest header2",
+          "subheader": "to jest subheader2",
+          "desc": "to jest desc2"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "name": "Lokalnym zbiórkom",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.2",
+      "items": [
+        {
+          "header": "to jest header3",
+          "subheader": "to jest subheader3",
+          "desc": "to jest desc3"
+        },
+        {
+          "header": "to jest header3",
+          "subheader": "to jest subheader3",
+          "desc": "to jest desc3"
+        },
+        {
+          "header": "to jest header3",
+          "subheader": "to jest subheader3",
+          "desc": "to jest desc3"
+        }
+      ],
+      "id": 2
+    }
+  ],
   "users": [
     {
       "name": "Radosław",
