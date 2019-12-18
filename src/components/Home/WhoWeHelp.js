@@ -6,7 +6,10 @@ class WhoWeHelp extends React.Component {
     state = {
         buttonsArray: [],
         fundation: [],
-        paginationButtons: []
+        items: [],
+        paginationButtons: [],
+        currentPage: 1,
+        itemsPerPage: 3
     }
 
     componentDidMount() {
@@ -22,30 +25,32 @@ class WhoWeHelp extends React.Component {
         })
         Axios.get("http://localhost:3000/fundations?id=0").then((response2) => {
             this.setState({
-                fundation: response2.data
+                fundation: response2.data,
+                items: response2.data[0].items
             })
             console.log(response2.data[0].items.length)
             let paginationArray = []
             for (let i = 0; i < Math.ceil(response2.data[0].items.length / 3); i++) {
                 paginationArray.push(i + 1)
-                console.log(paginationArray)
             }
             this.setState({
                 paginationButtons: paginationArray
             })
-
         })
+
     }
 
     changeOrganisation = (index) => {
         Axios.get(`http://localhost:3000/fundations?id=${index}`).then((response) => {
+
             this.setState({
-                fundation: response.data
+                currentPage: 1,
+                fundation: response.data,
+                items: response.data[0].items
             })
             let paginationArray = []
             for (let i = 0; i < Math.ceil(response.data[0].items.length / 3); i++) {
                 paginationArray.push(i + 1)
-                console.log(paginationArray)
             }
             this.setState({
                 paginationButtons: paginationArray
@@ -53,8 +58,16 @@ class WhoWeHelp extends React.Component {
         })
     }
 
+    paginationClick = (event) => {
+        this.setState({
+            currentPage: Number(event.target.id)
+        });
+    }
+
     render() {
-        console.log(this.state.paginationButtons)
+        const indexOfLastItem = this.state.currentPage * this.state.itemsPerPage;
+        const indexOfFirstItem = indexOfLastItem - this.state.itemsPerPage;
+        const currentItems = this.state.items.slice(indexOfFirstItem, indexOfLastItem);
         return (
             <section className="who-we-help-section">
                 <h1>Komu pomagamy</h1>
@@ -76,37 +89,39 @@ class WhoWeHelp extends React.Component {
                                     <div className="description-container">
                                         <h3 key={index}>{value.desc}</h3>
                                     </div>
-                                    {
-                                        value.items.map((value1, index2) => {
-                                            return (
-                                                <div className="items-container" style={{ display: index2 > 2 ? "none" : "block" }} key={index2}>
-                                                    <div className="description-header-container">
-                                                        <h3>{value1.header}</h3>
-                                                    </div>
-                                                    <div className="description-subheader-container">
-                                                        <h4>{value1.subheader}</h4>
-                                                        <h4>{value1.desc}</h4>
-                                                    </div>
-                                                    <hr style={{ display: index2 === 2 ? "none" : "block" }}></hr>
-                                                </div>
-                                            )
-                                        })
-                                    }
+
                                 </>
+                            )
+                        })
+                    }
+                    {
+                        currentItems.map((value1, index2) => {
+                            return (
+                                <div className="items-container" key={index2}>
+                                    <div className="description-header-container">
+                                        <h3>{value1.header}</h3>
+                                    </div>
+                                    <div className="description-subheader-container">
+                                        <h4>{value1.subheader}</h4>
+                                        <h4>{value1.desc}</h4>
+                                    </div>
+                                    <hr style={{ display: index2 === 2 ? "none" : "block" }}></hr>
+                                </div>
                             )
                         })
                     }
                 </div>
                 <div className="pagination-buttons-container">
                     {
-                        this.state.paginationButtons.map((button, index) => {
+                        this.state.paginationButtons.map((number) => {
                             return (
-                                <p className="pagination-button">{button}</p>
+                                <p key={number}
+                                    id={number} onClick={this.paginationClick} className="pagination-button">{number}</p>
                             )
                         })
                     }
                 </div>
-            </section>
+            </section >
         )
     }
 }
