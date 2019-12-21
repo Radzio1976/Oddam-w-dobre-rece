@@ -4,6 +4,7 @@ import AboutUs from './AboutUs';
 import ThreeColumns from './ThreeColumns';
 import FourSteps from './FourSteps';
 import WhoWeHelp from './WhoWeHelp';
+import Contact from './Contact';
 
 
 
@@ -16,6 +17,7 @@ class Home extends React.Component {
                 <FourSteps />
                 <AboutUs />
                 <WhoWeHelp />
+                <Contact />
             </div>
         )
     }

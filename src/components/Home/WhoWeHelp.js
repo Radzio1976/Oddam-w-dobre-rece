@@ -28,7 +28,6 @@ class WhoWeHelp extends React.Component {
                 fundation: response2.data,
                 items: response2.data[0].items
             })
-            console.log(response2.data[0].items.length)
             let paginationArray = []
             for (let i = 0; i < Math.ceil(response2.data[0].items.length / 3); i++) {
                 paginationArray.push(i + 1)
@@ -42,7 +41,6 @@ class WhoWeHelp extends React.Component {
 
     changeOrganisation = (index) => {
         Axios.get(`http://localhost:3000/fundations?id=${index}`).then((response) => {
-
             this.setState({
                 currentPage: 1,
                 fundation: response.data,
