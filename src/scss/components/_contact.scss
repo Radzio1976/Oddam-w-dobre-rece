@@ -87,6 +87,21 @@
     }
 }
 
+footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -36px;
+    .footer-copyright {
+        margin-left: 46%;
+    }
+    .footer-social {
+        margin-right: 3%;
+        img {
+            margin-left: 20px;
+        }
+    }
+}
+
 /*
 label {
         display: flex;

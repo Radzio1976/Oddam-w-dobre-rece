@@ -1,7 +1,8 @@
 import React from 'react';
 import Axios from 'axios';
-import { Redirect } from 'react-router-dom'
-import { AuthContext } from '../App'
+import { Redirect } from 'react-router-dom';
+import { AuthContext } from '../App';
+import Decoration from '../../src/assets/images/Decoration.svg';
 
 class Login extends React.Component {
     state = {
@@ -40,15 +41,22 @@ class Login extends React.Component {
                                 return (
                                     isAuth ?
                                         <Redirect to="/" /> :
-                                        <form onSubmit={(e) => this.handleSubmit(e, login)}>
-                                            <label>Email
+                                        <>
+                                            <h1>Zaloguj się</h1>
+                                            <img src={Decoration}></img>
+                                            <form onSubmit={(e) => this.handleSubmit(e, login)}>
+                                                <label>Email
                             <input type="text" name="email" value={this.state.email} onChange={this.handleChange}></input>
-                                            </label>
-                                            <label>Hasło
+                                                </label>
+                                                <label style={{ height: "100px" }}>Hasło
                             <input type="password" name="password" value={this.state.password} onChange={this.handleChange}></input>
-                                            </label>
-                                            <button>Zaloguj</button>
-                                        </form>
+                                                </label>
+                                                <div className="login-buttons">
+                                                    <p onClick={() => this.props.history.push("/register")}>Załóż konto</p>
+                                                    <button>Zaloguj</button>
+                                                </div>
+                                            </form>
+                                        </>
                                 )
                             }
                         }

@@ -143,6 +143,22 @@
       "time": "12.12",
       "comments": "sssssssssssssssssss",
       "id": 9
+    },
+    {
+      "user": "r.tomaszewski@gmail.com",
+      "typeOfThingsToGive": "zabawki",
+      "bagsQuantity": 3,
+      "location": "Łódź",
+      "forWhom": "niepełnosprawnym",
+      "organisationName": "RTYYUIOOOO",
+      "street": "Wrocławska, 83A/6",
+      "city": "Jelenia Góra",
+      "zipCode": "58888",
+      "phone": "509998279",
+      "date": "12.12.2020",
+      "time": "20.00",
+      "comments": "wwwwwwwwwwwwwwwwwwwwwwwwwww",
+      "id": 10
     }
   ],
   "fundations": [
@@ -289,6 +305,12 @@
       "name": "Radosław Tomaszewski",
       "info": "rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr",
       "id": 1
+    },
+    {
+      "email": "r.tomaszewski@gmail.com",
+      "name": "Radosław Tomaszewski",
+      "info": "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
+      "id": 2
     }
   ],
   "users": [

@@ -1,4 +1,5 @@
 import React from 'react';
+import Decoration from '../../assets/images/Decoration.svg';
 
 class HomeHeader extends React.Component {
     render() {
@@ -10,6 +11,7 @@ class HomeHeader extends React.Component {
                     <div className="header-text-upper">
                         <h1>Zacznij pomagać!</h1>
                         <h1>Oddaj niechciane rzeczy w zaufane ręce</h1>
+                        <img src={Decoration}></img>
                     </div>
                     <div className="header-text-lower">
                         <div className="header-text-lower-left-button">

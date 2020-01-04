@@ -20,6 +20,9 @@
             text-align: center;
             height: 54%;
             padding-top: 100px;
+            img {
+                margin-top: 25px;
+            }
         }
         .header-text-lower {
             display: flex;
@@ -29,7 +32,8 @@
                 text-align: center;
                 text-transform: uppercase;
                 height: 100px;
-                border: 3px solid black;
+                width: 275px;
+                border: 1px solid black;
                 padding-left: 55px;
                 padding-right: 55px;
                 cursor: pointer;
@@ -38,7 +42,7 @@
                 text-align: center;
                 text-transform: uppercase;
                 height: 100px;
-                border: 3px solid black;
+                border: 1px solid black;
                 padding-left: 45px;
                 padding-right: 45px;
                 cursor: pointer;
