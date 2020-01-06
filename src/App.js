@@ -2,6 +2,7 @@ import React, { createContext } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './components/Home';
 import Login from './components/Login';
+import Logout from './components/Logout';
 import Register from './components/Register';
 import Navigation from './components/Navigation';
 import GiveThings from './components/GiveThings';
@@ -43,6 +44,7 @@ class App extends React.Component {
             <Route path="/give-things" component={GiveThings} />
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />
+            <Route path="/logout" component={Logout} />
           </Switch>
         </BrowserRouter>
       </AuthContext.Provider>

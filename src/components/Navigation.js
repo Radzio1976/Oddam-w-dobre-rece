@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import { AuthContext } from '../App'
+import { Redirect } from 'react-router-dom';
 
 function Navigation(props) {
     return (

@@ -61,7 +61,7 @@ class Login extends React.Component {
                             }
                         }
                     </AuthContext.Consumer>
-                    <p>{this.state.error}</p>
+                    <p style={{ fontSize: "14px", color: "red" }}>{this.state.error}</p>
                 </div>
             </section>
         )

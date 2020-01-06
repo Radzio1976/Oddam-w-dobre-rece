@@ -2,6 +2,7 @@ import React from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import { AuthContext } from '../../App'
 import Axios from 'axios';
+import Decoration from '../../assets/images/Decoration.svg';
 
 class GiveThings extends React.Component {
     state = {
@@ -71,25 +72,30 @@ class GiveThings extends React.Component {
 
                     </div>
                     <div className="give-things-header-text">
-                        <h2>Oddaj rzeczy, których już nie chcesz</h2>
-                        <h1>Potrzebującym</h1>
+                        <h1>Oddaj rzeczy, których już nie chcesz</h1>
+                        <h1 style={{ marginTop: "10px", textTransform: "uppercase" }}>Potrzebującym</h1>
+                        <img src={Decoration}></img>
                         <h2>Wystarczą 4 proste kroki</h2>
                         <div className="give-things-header-text-lower-container">
                             <div>
-                                <h3>1</h3>
-                                <h3>Wybierz rzeczy</h3>
+                                <h2>1</h2>
+                                <h3 className="square-text-upper">Wybierz</h3>
+                                <h3 className="square-text-lower">rzeczy</h3>
                             </div>
                             <div>
-                                <h3>2</h3>
-                                <h3>Spakuj je w worki</h3>
+                                <h2>2</h2>
+                                <h3 className="square-text-upper">Spakuj je</h3>
+                                <h3 className="square-text-lower">w worki</h3>
                             </div>
                             <div>
-                                <h3>3</h3>
-                                <h3>Wybierz fundację</h3>
+                                <h2>3</h2>
+                                <h3 className="square-text-upper">Wybierz</h3>
+                                <h3 className="square-text-lower">fundację</h3>
                             </div>
                             <div>
-                                <h3>4</h3>
-                                <h3>Zamów kuriera</h3>
+                                <h2>4</h2>
+                                <h3 className="square-text-upper">Zamów</h3>
+                                <h3 className="square-text-lower">kuriera</h3>
                             </div>
                         </div>
                     </div>
@@ -103,8 +109,8 @@ class GiveThings extends React.Component {
 
 
                         <div style={{ display: this.state.stepCounter === 0 ? "block" : "none" }} className="give-things-form-step-one give-things-form-page">
-                            <h2>Krok 1/4</h2>
-                            <h3>Zaznacz co chcesz oddać</h3>
+                            <p className="give-things-form-page_step">Krok 1/4</p>
+                            <h3 className="give-things-form-page_title">Zaznacz co chcesz oddać</h3>
                             <label className="give-things-form-answer-container">ubrania, które nadają się do ponownego użycia
                 <input style={{ display: "block" }} type="radio" onChange={this.handleChange} value="ubrania, które nadają się do ponownego użycia" name="typeOfThingsToGive" defaultChecked={true}></input>
                                 <span className="checkmark"></span>
@@ -125,28 +131,33 @@ class GiveThings extends React.Component {
                 <input style={{ display: "block" }} type="radio" onChange={this.handleChange} value="inne" name="typeOfThingsToGive"></input>
                                 <span className="checkmark"></span>
                             </label>
-                            <h3 onClick={this.goToNextStep} style={{ border: "1px solid grey", width: "100px" }}>Dalej</h3>
+                            <div className="give-things-form-buttons-container">
+                                <p className="give-things-form-page_button" onClick={this.goToNextStep}>Dalej</p>
+                            </div>
                         </div>
 
 
                         <div style={{ display: this.state.stepCounter === 1 ? "block" : "none" }} className="give-things-form-step-two give-things-form-page">
-                            <h2>Krok 2/4</h2>
-                            <h3>Podaj liczbę 60l worków, w które spakowałeś/aś rzeczy</h3>
+                            <p className="give-things-form-page_step">Krok 2/4</p>
+                            <h3 className="give-things-form-page_title">Podaj liczbę 60l worków, w które spakowałeś/aś rzeczy</h3>
+                            <label>Liczba 60l worków:
                             <select type="number" onChange={this.handleChange} name="bagsQuantity">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                            <h3 onClick={this.backToPrevStep} style={{ border: "1px solid grey", width: "100px" }}>Wstecz</h3>
-                            <h3 onClick={this.goToNextStep} style={{ border: "1px solid grey", width: "100px" }}>Dalej</h3>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select></label>
+                            <div className="give-things-form-buttons-container">
+                                <p className="give-things-form-page_button" onClick={this.backToPrevStep}>Wstecz</p>
+                                <p className="give-things-form-page_button" onClick={this.goToNextStep}>Dalej</p>
+                            </div>
                         </div>
 
 
                         <div style={{ display: this.state.stepCounter === 2 ? "block" : "none" }} className="give-things-form-step-three give-things-form-page">
-                            <h2>Krok 3/4</h2>
-                            <h3>Lokalizacja</h3>
+                            <p className="give-things-form-page_step">Krok 3/4</p>
+                            <h3 className="give-things-form-page_title">Lokalizacja</h3>
                             <select type="number" onChange={this.handleChange} name="location">
                                 <option value="Poznań">Poznań</option>
                                 <option value="Warszawa">Warszawa</option>
@@ -177,14 +188,16 @@ class GiveThings extends React.Component {
                             </label>
                             <h4>Wpisz nazwę konkretnej organizacji</h4>
                             <input type="text" name="organisationName" onChange={this.handleChange} value={this.state.organisationName} />
-                            <h3 onClick={this.backToPrevStep} style={{ border: "1px solid grey", width: "100px" }}>Wstecz</h3>
-                            <h3 onClick={this.goToNextStep} style={{ border: "1px solid grey", width: "100px" }}>Dalej</h3>
+                            <div className="give-things-form-buttons-container">
+                                <p className="give-things-form-page_button" onClick={this.backToPrevStep}>Wstecz</p>
+                                <p className="give-things-form-page_button" onClick={this.goToNextStep}>Dalej</p>
+                            </div>
                         </div>
 
 
                         <div style={{ display: this.state.stepCounter === 3 ? "block" : "none" }} className="give-things-form-step-four give-things-form-page">
-                            <h2>Krok 4/4</h2>
-                            <h3>Podaj adres oraz termin odbioru rzeczy przez kuriera</h3>
+                            <p className="give-things-form-page_step">Krok 4/4</p>
+                            <h3 className="give-things-form-page_title">Podaj adres oraz termin odbioru rzeczy przez kuriera</h3>
                             <div className="give-things-form-step-four-left">
                                 <h4>Adres odbioru:</h4>
                                 <label>Ulica
@@ -205,8 +218,10 @@ class GiveThings extends React.Component {
                                 <label>Uwagi dla kuriera
                             <textarea name="comments" onChange={this.handleChange} value={this.state.comments}></textarea></label>
                             </div>
-                            <h3 onClick={this.backToPrevStep} style={{ border: "1px solid grey", width: "100px" }}>Wstecz</h3>
-                            <h3 onClick={this.goToNextStep} style={{ border: "1px solid grey", width: "100px" }}>Dalej</h3>
+                            <div className="give-things-form-buttons-container">
+                                <p className="give-things-form-page_button" onClick={this.backToPrevStep}>Wstecz</p>
+                                <p className="give-things-form-page_button" onClick={this.goToNextStep}>Dalej</p>
+                            </div>
                         </div>
 
 
@@ -228,8 +243,10 @@ class GiveThings extends React.Component {
                                 <p>Godzina: {this.state.time}</p>
                                 <p>Uwagi dla kuriera: {this.state.comments}</p>
                             </div>
-                            <h3 onClick={this.backToPrevStep} style={{ border: "1px solid grey", width: "100px" }}>Wstecz</h3>
-                            <button onClick={this.goToNextStep}>Potwierdzam</button>
+                            <div className="give-things-form-buttons-container">
+                                <p className="give-things-form-page_button" onClick={this.backToPrevStep}>Wstecz</p>
+                                <button className="give-things-form-page_button" onClick={this.goToNextStep}>Potwierdzam</button>
+                            </div>
                         </div>
 
 

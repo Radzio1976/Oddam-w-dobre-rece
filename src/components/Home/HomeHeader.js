@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, withRouter } from 'react-router-dom';
 import Decoration from '../../assets/images/Decoration.svg';
 
 class HomeHeader extends React.Component {
@@ -14,7 +15,7 @@ class HomeHeader extends React.Component {
                         <img src={Decoration}></img>
                     </div>
                     <div className="header-text-lower">
-                        <div className="header-text-lower-left-button">
+                        <div onClick={() => this.props.history.push("/give-things")} className="header-text-lower-left-button">
                             <h1>Oddaj</h1>
                             <h1>Rzeczy</h1>
                         </div>
@@ -29,4 +30,4 @@ class HomeHeader extends React.Component {
     }
 }
 
-export default HomeHeader
+export default withRouter(HomeHeader);
