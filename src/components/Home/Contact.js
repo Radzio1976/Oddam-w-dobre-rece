@@ -99,15 +99,15 @@ class Contact extends React.Component {
                         <form onSubmit={this.handleSubmit}>
                             <div className="contact-form-upper">
                                 <label>Wpisz swoje imię
-                            <input type="text" name="name" value={this.state.name.value} onChange={this.handleChange}></input></label>
-                                <p>{this.state.name.error}</p>
+                            <input type="text" name="name" value={this.state.name.value} onChange={this.handleChange}></input>
+                                    <p>{this.state.name.error}</p></label>
                                 <label>Wpisz swój email
-                            <input type="text" name="email" value={this.state.email.value} onChange={this.handleChange}></input></label>
-                                <p>{this.state.email.error}</p>
+                            <input type="text" name="email" value={this.state.email.value} onChange={this.handleChange}></input>
+                                    <p>{this.state.email.error}</p></label>
                             </div>
-                            <label>Wpisz swoją wiadomość</label>
+                            <label>Wpisz swoją wiadomość
                             <textarea name="info" value={this.state.info.value} onChange={this.handleChange}></textarea>
-                            <p>{this.state.info.error}</p>
+                                <p>{this.state.info.error}</p></label>
                             <button>Wyślij</button>
                         </form>
                     </div>
