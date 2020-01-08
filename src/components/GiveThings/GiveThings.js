@@ -4,6 +4,7 @@ import { AuthContext } from '../../App';
 import { Redirect } from 'react-router-dom';
 import Axios from 'axios';
 import Decoration from '../../assets/images/Decoration.svg';
+import Contact from '../Home/Contact';
 
 class GiveThings extends React.Component {
     state = {
@@ -107,9 +108,29 @@ class GiveThings extends React.Component {
                                             </div>
                                         </div>
                                     </section>
-                                    <section className="important">
-                                        <h3>Ważne</h3>
-                                        <h2>Wszystkie rzeczy do oddania zapakuj w 60l worki. Dokładną instrukcję jak spakować rzeczy znajdziesz TUTAJ.</h2>
+                                    <section style={{ display: this.state.stepCounter > 3 ? "none" : "block" }} className="important">
+                                        {
+                                            this.state.stepCounter === 0 ?
+                                                <>
+                                                    <h3>Ważne</h3>
+                                                    <h4>Uzupełnij szczegóły dotyczące Twoich rzeczy. Dzięki temu będziemy wiedzieć komu najlepiej je przekazać.</h4>
+                                                </> :
+                                                this.state.stepCounter === 1 ?
+                                                    <>
+                                                        <h3>Ważne</h3>
+                                                        <h4>Wszystkie rzeczy do oddania zapakuj w 60l worki. Dokładną instrukcję jak spakować rzeczy znajdziesz TUTAJ.</h4>
+                                                    </> :
+                                                    this.state.stepCounter === 2 ?
+                                                        <>
+                                                            <h3>Ważne</h3>
+                                                            <h4>Jeśli wiesz komu chcesz pomóc, możesz wpisać nazwę tej organizacji w wyszukiwarce. Możesz też filtrować organizacje po ich lokalizacji bądź celu ich pomocy.</h4>
+                                                        </> :
+                                                        this.state.stepCounter === 3 ?
+                                                            <>
+                                                                <h3>Ważne</h3>
+                                                                <h4>Podaj adres oraz termin odbioru rzeczy.</h4>
+                                                            </> : ""
+                                        }
                                     </section>
                                     <section className="give-things-form">
                                         <form onSubmit={this.handleSubmit}>
@@ -165,7 +186,7 @@ class GiveThings extends React.Component {
                                             <div style={{ display: this.state.stepCounter === 2 ? "block" : "none" }} className="give-things-form-step-three give-things-form-page">
                                                 <p className="give-things-form-page_step">Krok 3/4</p>
                                                 <h3 className="give-things-form-page_title">Lokalizacja</h3>
-                                                <select type="number" onChange={this.handleChange} name="location">
+                                                <select type="number" onChange={this.handleChange} name="location" style={{ marginLeft: 0 }}>
                                                     <option value="Poznań">Poznań</option>
                                                     <option value="Warszawa">Warszawa</option>
                                                     <option value="Łódź">Łódź</option>
@@ -194,7 +215,7 @@ class GiveThings extends React.Component {
                                                     <span className="checkmark"></span>
                                                 </label>
                                                 <h4>Wpisz nazwę konkretnej organizacji</h4>
-                                                <input type="text" name="organisationName" onChange={this.handleChange} value={this.state.organisationName} />
+                                                <input className="organisation-name-input" type="text" name="organisationName" onChange={this.handleChange} value={this.state.organisationName} />
                                                 <div className="give-things-form-buttons-container">
                                                     <p className="give-things-form-page_button" onClick={this.backToPrevStep}>Wstecz</p>
                                                     <p className="give-things-form-page_button" onClick={this.goToNextStep}>Dalej</p>
@@ -208,7 +229,7 @@ class GiveThings extends React.Component {
                                                 <div className="give-things-form-step-four-left">
                                                     <h4>Adres odbioru:</h4>
                                                     <label>Ulica
-                                            <input type="text" name="street" onChange={this.handleChange} value={this.state.street} /></label>
+                                                    <input type="text" name="street" onChange={this.handleChange} value={this.state.street} /></label>
                                                     <label>Miasto
                                             <input type="text" name="city" onChange={this.handleChange} value={this.state.city} /></label>
                                                     <label>Kod Pocztowy
@@ -223,7 +244,7 @@ class GiveThings extends React.Component {
                                                     <label>Godzina
                                                 <input type="text" name="time" onChange={this.handleChange} value={this.state.time} /></label>
                                                     <label>Uwagi dla kuriera
-                                        <textarea name="comments" onChange={this.handleChange} value={this.state.comments}></textarea></label>
+                                                    <textarea name="comments" onChange={this.handleChange} value={this.state.comments}></textarea></label>
                                                 </div>
                                                 <div className="give-things-form-buttons-container">
                                                     <p className="give-things-form-page_button" onClick={this.backToPrevStep}>Wstecz</p>
@@ -263,7 +284,11 @@ class GiveThings extends React.Component {
                                                 <h1>informacje o odbiorze</h1>
                                             </div>
                                         </form>
+                                        <div className="give-things-form_image">
+
+                                        </div>
                                     </section>
+                                    <Contact />
                                 </div >
                         )
                     }

@@ -191,6 +191,86 @@
       "time": "",
       "comments": "",
       "id": 12
+    },
+    {
+      "user": "r.tomaszewski@gmail.com",
+      "typeOfThingsToGive": "inne",
+      "bagsQuantity": 1,
+      "location": "Poznań",
+      "forWhom": "dzieciom",
+      "organisationName": "",
+      "street": "",
+      "city": "",
+      "zipCode": "",
+      "phone": "",
+      "date": "",
+      "time": "",
+      "comments": "",
+      "id": 13
+    },
+    {
+      "user": "r.tomaszewski@gmail.com",
+      "typeOfThingsToGive": "ubrania, które nadają się do ponownego użycia",
+      "bagsQuantity": 1,
+      "location": "Poznań",
+      "forWhom": "dzieciom",
+      "organisationName": "",
+      "street": "",
+      "city": "",
+      "zipCode": "",
+      "phone": "",
+      "date": "",
+      "time": "",
+      "comments": "",
+      "id": 14
+    },
+    {
+      "user": "r.tomaszewski@gmail.com",
+      "typeOfThingsToGive": "ubrania, które nadają się do ponownego użycia",
+      "bagsQuantity": 1,
+      "location": "Poznań",
+      "forWhom": "dzieciom",
+      "organisationName": "",
+      "street": "",
+      "city": "",
+      "zipCode": "",
+      "phone": "",
+      "date": "",
+      "time": "",
+      "comments": "",
+      "id": 15
+    },
+    {
+      "user": "r.tomaszewski@gmail.com",
+      "typeOfThingsToGive": "ubrania, które nadają się do ponownego użycia",
+      "bagsQuantity": 1,
+      "location": "Poznań",
+      "forWhom": "dzieciom",
+      "organisationName": "",
+      "street": "",
+      "city": "",
+      "zipCode": "",
+      "phone": "",
+      "date": "",
+      "time": "",
+      "comments": "",
+      "id": 16
+    },
+    {
+      "user": "r.tomaszewski@gmail.com",
+      "typeOfThingsToGive": "ubrania, które nadają się do ponownego użycia",
+      "bagsQuantity": 1,
+      "location": "Poznań",
+      "forWhom": "dzieciom",
+      "organisationName": "",
+      "street": "",
+      "city": "",
+      "zipCode": "",
+      "phone": "",
+      "date": "",
+      "time": "",
+      "comments": "",
+      "id": 17
     }
   ],
   "fundations": [
@@ -343,6 +423,12 @@
       "name": "Radosław Tomaszewski",
       "info": "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
       "id": 2
+    },
+    {
+      "email": "r.tomaszewski@gmail.com",
+      "name": "Radosław Tomaszewski",
+      "info": "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww12345",
+      "id": 3
     }
   ],
   "users": [
