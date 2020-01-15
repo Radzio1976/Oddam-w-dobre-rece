@@ -2,9 +2,10 @@ import React from 'react';
 import Decoration from '../../assets/images/Decoration.svg';
 import Signature from '../../assets/images/Signature.svg';
 
-function AboutUs() {
+function AboutUs(props) {
+    console.log(props.aboutUs)
     return (
-        <section className="about-us-container">
+        <section className="about-us-container" ref={props.aboutUs}>
             <div className="about-us-text">
                 <h1>O nas</h1>
                 <img src={Decoration}></img>

@@ -13,7 +13,7 @@ function FourSteps(props) {
             {
                 ({ isAuth }) => {
                     return (
-                        <section className="four-steps-wrapper">
+                        <section className="four-steps-wrapper" ref={props.fourSteps}>
                             <h1>Wystarczą cztery proste kroki</h1>
                             <img src={Decoration}></img>
                             <div className="four-steps_container">

@@ -11,7 +11,11 @@ const AuthContext = createContext()
 
 class App extends React.Component {
   state = {
-    isAuth: false
+    isAuth: false,
+    fourSteps: React.createRef(),
+    aboutUs: React.createRef(),
+    whoWeHelp: React.createRef(),
+    contact: React.createRef()
   }
 
   componentDidMount() {
@@ -34,13 +38,33 @@ class App extends React.Component {
     localStorage.removeItem("email")
   }
 
+  scrollToContact = () => {
+    this.state.contact.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+
+  scrollToFourSteps = () => {
+    console.log(this.state.fourSteps.current)
+    this.state.fourSteps.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+
+  scrollToAboutUs = () => {
+    console.log(this.state.aboutUs.current)
+    this.state.aboutUs.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+
+  scrollToWhoWeHelp = () => {
+    console.log(this.state.whoWeHelp.current)
+    this.state.whoWeHelp.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+
+
   render() {
     return (
       <AuthContext.Provider value={{ isAuth: this.state.isAuth, login: this.login, logout: this.logout }}>
         <BrowserRouter>
-          <Navigation />
+          <Navigation scrollToContact={this.scrollToContact} scrollToFourSteps={this.scrollToFourSteps} scrollToAboutUs={this.scrollToAboutUs} scrollToWhoWeHelp={this.scrollToWhoWeHelp} />
           <Switch>
-            <Route path="/" exact component={Home} />
+            <Route path="/" exact component={() => <Home contact={this.state.contact} fourSteps={this.state.fourSteps} aboutUs={this.state.aboutUs} whoWeHelp={this.state.whoWeHelp} />} />
             <Route path="/give-things" component={GiveThings} />
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />

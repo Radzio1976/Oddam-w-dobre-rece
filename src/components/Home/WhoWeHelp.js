@@ -63,11 +63,12 @@ class WhoWeHelp extends React.Component {
     }
 
     render() {
+        console.log(this.props)
         const indexOfLastItem = this.state.currentPage * this.state.itemsPerPage;
         const indexOfFirstItem = indexOfLastItem - this.state.itemsPerPage;
         const currentItems = this.state.items.slice(indexOfFirstItem, indexOfLastItem);
         return (
-            <section className="who-we-help-section">
+            <section className="who-we-help-section" ref={this.props.whoWeHelp}>
                 <h1>Komu pomagamy</h1>
                 <img src={Decoration}></img>
                 <div className="container-for-buttons">

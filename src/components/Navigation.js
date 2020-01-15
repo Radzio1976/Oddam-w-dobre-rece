@@ -4,6 +4,7 @@ import { AuthContext } from '../App'
 import { Redirect } from 'react-router-dom';
 
 function Navigation(props) {
+    console.log(props)
     return (
         <AuthContext.Consumer>
             {
@@ -16,7 +17,10 @@ function Navigation(props) {
                                         <>
                                             <h4>Cześć {localStorage.getItem("email")}</h4>
                                             <h4 onClick={() => props.history.push("/give-things")}>Oddaj rzeczy</h4>
-                                            <h4 onClick={logout}>Wyloguj</h4>
+                                            <h4 onClick={() => {
+                                                logout()
+                                                props.history.push("/logout")
+                                            }}>Wyloguj</h4>
                                         </> :
                                         <>
                                             <h4 onClick={() => props.history.push("/login")}>Zaloguj</h4>
@@ -27,10 +31,10 @@ function Navigation(props) {
                             <div className="lower-nav">
                                 <ul>
                                     <li onClick={() => props.history.push("/")}>Start</li>
-                                    <li>O co chodzi?</li>
-                                    <li>O nas</li>
-                                    <li>Fundacja i organizacje</li>
-                                    <li>Kontakt</li>
+                                    <li onClick={props.scrollToFourSteps}>O co chodzi?</li>
+                                    <li onClick={props.scrollToAboutUs}>O nas</li>
+                                    <li onClick={props.scrollToWhoWeHelp}>Fundacja i organizacje</li>
+                                    <li onClick={props.scrollToContact}>Kontakt</li>
                                 </ul>
                             </div>
                         </nav>

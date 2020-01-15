@@ -5,11 +5,13 @@ import { Redirect } from 'react-router-dom';
 import Axios from 'axios';
 import Decoration from '../../assets/images/Decoration.svg';
 import Contact from '../Home/Contact';
+import Icon1 from '../../assets/images/Icon1.svg';
+import Icon4 from '../../assets/images/Icon4.svg';
 
 class GiveThings extends React.Component {
     state = {
         typeOfThingsToGive: "ubrania, które nadają się do ponownego użycia",
-        bagsQuantity: "1",
+        bagsQuantity: 1,
         location: "Poznań",
         forWhom: "dzieciom",
         organisationName: "",
@@ -256,20 +258,47 @@ class GiveThings extends React.Component {
                                             <div style={{ display: this.state.stepCounter === 4 ? "block" : "none" }} className="give-things-form-step-five give-things-form-page">
                                                 <h2>Podsumowanie Twojej darowizny</h2>
                                                 <h3>Oddajesz</h3>
-                                                <p>{this.state.bagsQuantity} worki, {this.state.typeOfThingsToGive}, {this.state.forWhom}</p>
-                                                <p>dla lokalizacji: {this.state.location}</p>
+                                                <div className="give-things-form-step-five_summary-image">
+                                                    <img src={Icon1}></img>
+                                                    {
+                                                        this.state.bagsQuantity === 1 ?
+                                                            <p>{this.state.bagsQuantity} worek , {this.state.typeOfThingsToGive}, {this.state.forWhom}</p> :
+                                                            this.state.bagsQuantity > 1 && this.state.bagsQuantity < 5 ?
+                                                                <p>{this.state.bagsQuantity} worki , {this.state.typeOfThingsToGive}, {this.state.forWhom}</p> :
+                                                                this.state.bagsQuantity > 4 ?
+                                                                    <p>{this.state.bagsQuantity} worków , {this.state.typeOfThingsToGive}, {this.state.forWhom}</p> : ""
+                                                    }
+                                                </div>
+                                                <div className="give-things-form-step-five_summary-image">
+                                                    <img src={Icon4}></img>
+                                                    <p>dla lokalizacji: {this.state.location}</p>
+                                                </div>
                                                 <div className="give-things-form-step-five-left">
                                                     <h3>Adres odbioru:</h3>
-                                                    <p>Ulica: {this.state.street}</p>
-                                                    <p>Miasto: {this.state.city}</p>
-                                                    <p>Kod pocztowy: {this.state.zipCode}</p>
-                                                    <p>Numer telefonu: {this.state.phone}</p>
+                                                    <div className="give-things-form-step-five-left_text-container">
+                                                        <p>Ulica:</p><p>{this.state.street}</p>
+                                                    </div>
+                                                    <div className="give-things-form-step-five-left_text-container">
+                                                        <p>Miasto:</p><p>{this.state.city}</p>
+                                                    </div>
+                                                    <div className="give-things-form-step-five-left_text-container">
+                                                        <p>Kod pocztowy:</p><p>{this.state.zipCode}</p>
+                                                    </div>
+                                                    <div className="give-things-form-step-five-left_text-container">
+                                                        <p>Numer telefonu:</p><p>{this.state.phone}</p>
+                                                    </div>
                                                 </div>
                                                 <div className="give-things-form-step-five-right">
-                                                    <h4>Termin odbioru:</h4>
-                                                    <p>Data: {this.state.date}</p>
-                                                    <p>Godzina: {this.state.time}</p>
-                                                    <p>Uwagi dla kuriera: {this.state.comments}</p>
+                                                    <h3>Termin odbioru:</h3>
+                                                    <div className="give-things-form-step-five-right_text-container">
+                                                        <p>Data:</p><p>{this.state.date}</p>
+                                                    </div>
+                                                    <div className="give-things-form-step-five-right_text-container">
+                                                        <p>Godzina:</p><p>{this.state.time}</p>
+                                                    </div>
+                                                    <div className="give-things-form-step-five-right_text-container">
+                                                        <p>Uwagi dla kuriera:</p><p style={{ width: "50%", overflowWrap: "break-word" }}>{this.state.comments}</p>
+                                                    </div>
                                                 </div>
                                                 <div className="give-things-form-buttons-container">
                                                     <p className="give-things-form-page_button" onClick={this.backToPrevStep}>Wstecz</p>
@@ -282,6 +311,7 @@ class GiveThings extends React.Component {
                                                 <h1>Dziękujemy za przesłanie formularza</h1>
                                                 <h1>Na maila prześlemy wszelkie</h1>
                                                 <h1>informacje o odbiorze</h1>
+                                                <img src={Decoration}></img>
                                             </div>
                                         </form>
                                         <div className="give-things-form_image">

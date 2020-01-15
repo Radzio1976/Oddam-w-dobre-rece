@@ -86,7 +86,7 @@ class Contact extends React.Component {
     render() {
         return (
             <>
-                <section className="contact-section">
+                <section className="contact-section" ref={this.props.contact}>
                     <div className="contact-section-left">
 
                     </div>

@@ -9,15 +9,16 @@ import Contact from './Contact';
 
 
 class Home extends React.Component {
+
     render() {
         return (
             <div className="container">
                 <HomeHeader />
                 <ThreeColumns />
-                <FourSteps />
-                <AboutUs />
-                <WhoWeHelp />
-                <Contact />
+                <FourSteps fourSteps={this.props.fourSteps} />
+                <AboutUs aboutUs={this.props.aboutUs} />
+                <WhoWeHelp whoWeHelp={this.props.whoWeHelp} />
+                <Contact contact={this.props.contact} />
             </div>
         )
     }

@@ -221,6 +221,47 @@
                 }
             }
         }
+        .give-things-form-step-five {
+            h2 {
+                margin-bottom: 10px;
+            }
+            .give-things-form-step-five_summary-image {
+                display: flex;
+                margin-top: 10px;
+                img {
+                    height: 40px;
+                }
+                p {
+                    margin-top: 8px;
+                    margin-left: 10px;
+                }
+            }
+            .give-things-form-step-five-left {
+                float: left;
+                width: 37%;
+                .give-things-form-step-five-left_text-container {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+            .give-things-form-step-five-right {
+                float: left;
+                width: 39%;
+                margin-left: 8%;
+                .give-things-form-step-five-right_text-container {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+        .give-things-form-step-six {
+            text-align: center;
+            padding-top: 175px;
+            img {
+                width: 195px;
+                margin-top: 10px;
+            }
+        }
         .give-things-form_image {
             width: 40%;
             height: 100%;
